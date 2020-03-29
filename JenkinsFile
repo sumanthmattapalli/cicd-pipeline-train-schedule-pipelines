@@ -1,0 +1,15 @@
+pipeline {
+
+agent any
+
+stages {
+
+stage('Build') {
+sh './gradlew clean buildi'
+archiveArtifacts artifacts: 'dist/trainSchedule.zip'
+}
+
+}
+
+
+}
